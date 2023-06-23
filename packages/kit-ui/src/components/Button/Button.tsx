@@ -1,11 +1,9 @@
-"use client";
-
 import React, { HTMLAttributes } from "react";
 import styled from "styled-components";
 
 const UiButton = styled.button`
   display: inline-block;
-  background-color: #4caf50;
+  background-color: #3e8e41;
   color: white;
   padding: 10px 20px;
   font-size: 16px;
@@ -13,8 +11,8 @@ const UiButton = styled.button`
   border-radius: 4px;
   cursor: pointer;
 
-  > :hover {
-    background-color: #45a049;
+  &:hover {
+    background-color: red;
   }
 
   > :active {

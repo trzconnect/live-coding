@@ -1,19 +1,24 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local"],
   "pipeline": {
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": [".dist/**"]
+      "outputs": ["build/**"],
+      "dependsOn": ["^build"]
     },
     "lint": {},
-    "dev": {
+    "start": {
       "cache": false,
-      "persistent": true
+      "persistent": true,
+      "dependsOn": ["^kit-ui#build"]
     },
     "test": {
       "cache": false,
       "persistent": true
+    },
+    "watch": {
+      "cache": false,
+      "persistent": true,
+      "dependsOn": ["^kit-ui#build"]
     }
   }
 }

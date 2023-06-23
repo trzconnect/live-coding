@@ -1,0 +1,53 @@
+{
+  "name": "kit-ui",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "module": "build/index.esm.js",
+  "types": "build/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "description": "A skeleton to create your own React component library using Rollup, TypeScript, Sass and Storybook",
+  "scripts": {
+    "build": "rollup -c --bundleConfigAsCjs",
+    "watch": "yarn build --watch",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [
+    "React",
+    "Component",
+    "Library",
+    "Rollup",
+    "Typescript",
+    "Sass",
+    "Storybook"
+  ],
+  "peerDependencies": {
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2",
+    "styled-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.5.0",
+    "@testing-library/react": "^12.1.2",
+    "@types/jest": "^24.0.24",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "@types/styled-components": "^5.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-preset-react-app": "^9.1.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rollup": "^3.26.3",
+    "rollup-plugin-peer-deps-external": "2.2.4",
+    "@rollup/plugin-commonjs": "25.0.3",
+    "@rollup/plugin-node-resolve": "15.1.0",
+    "@rollup/plugin-typescript": "11.1.2",
+    "styled-components": "^5.1.1",
+    "ts-jest": "^24.2.0",
+    "typescript": "^4.5.4"
+  }
+}

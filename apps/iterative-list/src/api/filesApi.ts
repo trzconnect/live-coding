@@ -33,7 +33,15 @@ const files = {
   ],
 };
 
-export const getFiles = (): Promise<any> => {
+export interface IEntryFile {
+  name: string;
+  children?: IEntryFile[];
+}
+
+export interface IFiles {
+  children: IEntryFile[];
+}
+export const getFiles = (): Promise<IFiles> => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(files);
