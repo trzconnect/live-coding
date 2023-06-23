@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import { IFiles, getFiles } from "./api/filesApi";
+import { EntryFile } from "./components/EntryFile";
 
 function App() {
+  const [files, setFiles] = useState<IFiles>();
+
+  useEffect(() => {
+    getFiles().then((data) => {
+      setFiles(data);
+    });
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {files?.children.map((entry) => (
+        <EntryFile entry={entry} depth={1} />
+      ))}
     </div>
   );
 }
