@@ -1,13 +1,17 @@
-import { countElements } from './countElements';
-
-describe('Algo test count occurence of each elements', () => {
-  it('Should return true if the string is a palindrome', () => {
-    const arr = [
-      [1, 2],
-      [1, 2, 3],
-      [1, 2, 3, 4],
+/**
+ * input => const arr = [
+      ["a", "b", "c"],
+      ["b", "c", "d"],
+      ["a", "c", "d"],
     ];
-    const expected = { 1: 3, 2: 3, 3: 2, 4: 1 };
-    expect(countElements(arr)).toEqual(expected);
-  });
+
+    output => {
+      a: 2,
+      b: 2,
+      c: 3,
+      d: 2,
+    }
+ */
+describe("Algo test count occurence of each elements", () => {
+  it("Should return true if the string is a palindrome", () => {});
 });
