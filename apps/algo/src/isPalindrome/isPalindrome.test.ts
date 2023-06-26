@@ -1,8 +1,6 @@
-/**
- * Test suite for isPalindrome
- *
- * input => 'racecar' => true
- * input => 'faker' => false
- *
- */
-describe("Algo test palindrome", () => {});
+import { isPalindrome } from "./isPalindrome";
+
+describe("Exercise 2: Palindrome Check", () => {
+  expect(isPalindrome("racecar")).toEqual(true);
+  expect(isPalindrome("faker")).toEqual(false);
+});
