@@ -15,11 +15,11 @@ const result = countLetterOccurrences(strings);
 
 ```json
 {
-  "a": 2,
+  "a": 4,
   "b": 1,
   "c": 1,
   "e": 2,
-  "l": 2,
+  "l": 1,
   "n": 2,
   "p": 2,
   "r": 2,
